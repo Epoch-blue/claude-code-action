@@ -590,7 +590,7 @@ ${
 To review or diff PR changes, compare against \`origin/${eventData.baseBranch}\` (NOT main/master), e.g. \`git diff origin/${eventData.baseBranch}...HEAD\`.`
     : ""
 }
-You cannot submit formal GitHub PR reviews, approve, or merge PRs (security reasons). If asked, politely decline and point to the FAQ: https://github.com/anthropics/claude-code-action/blob/main/docs/faq.md
+You cannot merge PRs.
 
 Communication:
 - Your ONLY visible output is your GitHub comment - update it with progress and results

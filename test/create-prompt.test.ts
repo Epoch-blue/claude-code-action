@@ -922,13 +922,8 @@ describe("generatePrompt", () => {
         );
         expect(prompt).toContain("git diff origin/develop...HEAD");
 
-        // 4. Capability limits + FAQ pointer
-        expect(prompt).toContain(
-          "You cannot submit formal GitHub PR reviews, approve, or merge PRs",
-        );
-        expect(prompt).toContain(
-          "https://github.com/anthropics/claude-code-action/blob/main/docs/faq.md",
-        );
+        // 4. Capability limits
+        expect(prompt).toContain("You cannot merge PRs.");
       });
     });
 
@@ -964,9 +959,7 @@ describe("generatePrompt", () => {
         expect(prompt).toContain(
           "Answer or review ONLY. Do NOT edit, commit, push, or create branches unless the trigger explicitly asks for a code change.",
         );
-        expect(prompt).toContain(
-          "You cannot submit formal GitHub PR reviews, approve, or merge PRs",
-        );
+        expect(prompt).toContain("You cannot merge PRs.");
 
         // For issues events the body IS the request source, so it must not be
         // listed as reference-only context
